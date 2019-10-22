@@ -1,12 +1,8 @@
-class Output {
+package Service;
 
-    Output() { }
+public class Service {
 
-    void getMessage(String msg){
-        System.out.println(msg);
-    }
-
-    void printChessArea(int height, int width) {
+    public static void printChessArea(int height, int width) {
         for (int i = 0; i < height; i++) {
             for (int j = 0; j < width; j++) {
                 if ((j + i) % 2 == 0) System.out.print("*");
@@ -17,4 +13,5 @@ class Output {
             System.out.println();
         }
     }
+
 }

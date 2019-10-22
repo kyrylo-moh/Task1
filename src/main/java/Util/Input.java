@@ -1,14 +1,16 @@
+package Util;
+
 import java.util.Scanner;
 
-class Input {
+public class Input {
 
     private static Output output;
 
-    static int getInt() {
+    public static int getInt() {
         Scanner scanner = new Scanner(System.in);
         output = new Output();
         int num;
-        output.getMessage("Input number:");
+        output.getMessage("Input number: ");
         if (scanner.hasNextInt()) {
             num = scanner.nextInt();
             if (num <= 0) {
@@ -18,7 +20,7 @@ class Input {
             }
         } else {
             output.getMessage("Your input number is incorrect, try again!");
-            scanner.next();//recursion
+            scanner.next();
             num = getInt();
         }
         return num;

@@ -1,3 +1,9 @@
+package Controller;
+
+import Util.*;
+import Model.ChessArea;
+import Service.Service;
+
 public class ChessController {
 
     public ChessController() { }
@@ -5,13 +11,13 @@ public class ChessController {
     private static ChessArea chessArea;
     private static Output output;
 
-    static void Run() {
+    public static void Run() {
         output = new Output();
         int height = Input.getInt();
         int width = Input.getInt();
         try {
             chessArea = new ChessArea(height, width);
-            output.printChessArea(chessArea.getHeight(), chessArea.getHeight());
+            Service.printChessArea(chessArea.getHeight(), chessArea.getWidth());
         } catch (IllegalArgumentException e) {
             output.getMessage("Your param must be bigger than 0");
         }

@@ -1,3 +1,5 @@
+package Model;
+
 public abstract class AbstractChessArea {
 
     private int height;
@@ -9,7 +11,7 @@ public abstract class AbstractChessArea {
         if (height <= 0 || width <= 0) throw new IllegalArgumentException();
     }
 
-    int getHeight() {
+    public int getHeight() {
         return height;
     }
 

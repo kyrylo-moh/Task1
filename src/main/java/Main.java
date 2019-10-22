@@ -1,3 +1,4 @@
+import Controller.ChessController;
 
 public class Main {
 
