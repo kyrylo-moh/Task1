@@ -1,8 +1,8 @@
-package Controller;
+package controller;
 
-import Util.*;
-import Model.ChessArea;
-import Service.Service;
+import util.*;
+import model.ChessArea;
+import service.Service;
 
 public class ChessController {
 

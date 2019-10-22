@@ -1,4 +1,4 @@
-import Controller.ChessController;
+import controller.ChessController;
 
 public class Main {
 
