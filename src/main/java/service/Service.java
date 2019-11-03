@@ -2,16 +2,25 @@ package service;
 
 public class Service {
 
-    public static void printChessArea(int height, int width) {
+    private StringBuilder stringBuilder = new StringBuilder();
+
+    public String printChessArea(int height, int width) {
         for (int i = 0; i < height; i++) {
             for (int j = 0; j < width; j++) {
-                if ((j + i) % 2 == 0) System.out.print("*");
-                else {
-                    System.out.print(" ");
+                if ((j + i) % 2 == 0) {
+                    stringBuilder.append('*');
+                } else {
+                    stringBuilder.append(' ');
                 }
             }
-            System.out.println();
-        }
+                stringBuilder.append('\n');
+            }
+            return stringBuilder.toString();
+    }
+
+    public void clearStringBuilder() {
+        stringBuilder.setLength(0);
     }
 
 }
+
